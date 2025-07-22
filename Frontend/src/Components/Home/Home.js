@@ -82,28 +82,50 @@ function Home() {
     <div>
       <Nav />
       <header className="home-header">
-      <div className="hero-content">
-          <h1 className="home-title">Welcome to E-learning Hub</h1>
+      <div className="container-home-fluid">
+        <div className="row align-items-center min-vh-100">
+          {/* Left Content Section */}
+          <div className="col-lg-4 col-md-12">
+            <div className="hero-content">
+              <h1 className="hero-title">
+                Unlock Your Potential Learn <span className="text-teal">Anytime</span>
+                <br />
+                Achieve <span className="text-yellow">Anywhere</span>
+              </h1>
+              
+              <p className="hero-description">
+                Unlock your potential with expert-led courses, hands-on projects, and real-time mentorship. 
+                Gain in-demand skills and industry-recognized certifications to advance your career.
+              </p>
+              
+              <div className="hero-buttons">
+                <button 
+                  className="btn btn-primary primary-btn"
+                  onClick={() => navigate(`/coursedetails`)}
+                >
+                  Get Started
+                  <i className="fas fa-arrow-right ms-2"></i>
+                </button>
+                <button className="btn btn-outline-secondary secondary-btn">
+                  As a Student
+                </button>
+              </div>
+            </div>
           </div>
-        <div>
-          <div>
-          <p className="home-description">
-            Discover a world of knowledge at your fingertips. Learn anytime, anywhere, at your own pace.
-          </p>
-          <div className="home-buttons">
-            <button className="btn primary-btn" onClick={() => navigate(`/coursedetails`)}>As a Teacher</button>
-            <button className="btn secondary-btn">As a Student</button>
+
+          {/* Right Image Section */}
+          <div className="col-lg-8 col-md-12">
+            <div className="hero-image-container">
+              <img 
+                src="/img/elearning.png" 
+                alt="Student learning online with laptop and headphones" 
+                className="hero-image img-fluid"
+              />
+            </div>
           </div>
-          </div>
-          <div className="hero-img">
-        <img
-          src="/img/elearning.png"
-          alt="Hero"
-          className="hero-image"
-        />
-         </div>
         </div>
-      </header>
+      </div>
+    </header>
       <section className="home-features">
         <h2>Why Choose Us?</h2>
         <div className="features-container">

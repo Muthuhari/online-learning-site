@@ -42,7 +42,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #6f42c1;
+  border-color: #2EC4B6;
 }
 
 textarea {
@@ -52,7 +52,7 @@ textarea {
 
 button {
   padding: 12px;
-  background-color: #6f42c1;
+  background-color: #2EC4B6;
   color: white;
   border: none;
   border-radius: 4px;
