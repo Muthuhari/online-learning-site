@@ -1271,3 +1271,314 @@
         font-size: 0.8rem;
     }
 }
+
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    position: relative;
+}
+
+.container-pricing-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-pricing-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.pricing-description {
+    font-size: 1.1rem;
+    color: #4a5568;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+}
+
+/* Pricing Cards Container */
+.pricing-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual Pricing Cards */
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Popular Badge */
+.pricing-popular {
+    border: 2px solid #48bb78;
+    transform: scale(1.05);
+}
+
+.pricing-popular-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+/* Card Headers */
+.pricing-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pricing-plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+}
+
+.pricing-plan-subtitle {
+    font-size: 0.8rem;
+    color: #718096;
+    margin: 0;
+}
+.pricing-plan-subtitle-prof{
+   font-size: 0.8rem;
+    color: #060606;
+    margin: 0;
+}
+/* Price Container */
+.pricing-price-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pricing-currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    vertical-align: top;
+}
+
+.pricing-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1;
+}
+
+.pricing-period {
+    font-size: 1rem;
+    color: #718096;
+    display: block;
+    margin-top: 5px;
+}
+.pricing-period-prof{
+    font-size: 1rem;
+    color: #adbdd2;
+    display: block;
+    margin-top: 5px;
+}
+
+.pricing-price-free {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2288d1;
+}
+
+.pricing-price-custom {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #08c754;
+     padding-bottom: 50px;
+}
+
+/* Buttons */
+.pricing-btn {
+    width: 100%;
+    /*padding: 16px 18px;*/
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem ;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+}
+
+.pricing-btn-primary {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: rgb(20, 19, 19);
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+.pricing-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+}
+
+.pricing-btn-secondary {
+    background: linear-gradient(135deg,#20b2aa 0%, #40e0d0 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+.pricing-btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 153, 225, 0.4);
+}
+
+/* Includes Text */
+.pricing-includes {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+.pricing-includes-prof {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #242424;
+    font-size: 0.9rem;
+}
+/* Features List */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-feature-prof {
+    padding: 5px 0;
+    color: #d8dbe0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #0d735a;
+}
+.pricing-feature {
+    padding: 5px 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-feature:last-child {
+    border-bottom: none;
+}
+
+.pricing-feature::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #48bb78;
+    border-radius: 50%;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* Card Specific Styling */
+.pricing-free {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.pricing-professional {
+    background: linear-gradient(135deg, #1C766D 0%, #1C766D 100%);
+}
+
+.pricing-enterprise {
+    background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+}
+
+.pricing-custom {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .pricing-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .pricing-popular {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-pricing-title {
+        font-size: 2rem;
+    }
+    
+    .pricing-description {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    
+    .pricing-card {
+        padding: 30px 25px;
+    }
+    
+    .pricing-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-pricing-fluid {
+        padding: 0 15px;
+    }
+    
+    .section-pricing-title {
+        font-size: 1.75rem;
+    }
+    
+    .pricing-card {
+        padding: 25px 20px;
+    }
+    
+    .pricing-price {
+        font-size: 2.5rem;
+    }
+    
+    .pricing-btn {
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
+}

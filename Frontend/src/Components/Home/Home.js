@@ -470,7 +470,135 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+<section>
+    <div class="pricing-section">
+        <div class="container-pricing-fluid">
+            <h2 class="section-pricing-title">Plans & Pricing</h2>
+            <p class="pricing-description">
+                Choose the perfect plan for your learning journey. Whether you're exploring for free or upgrading for premium features, we have a plan that fits your needs.
+            </p>
+            
+            <div class="pricing-cards-container">
+                {/*<!-- Free Plan -->*/}
+                <div class="pricing-card pricing-free">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Free Plan</h3>
+                        <p class="pricing-plan-subtitle">Best for Beginners</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-price-free">Free</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Start Learning →
+                    </button>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Limited No of free courses</li>
+                        <li class="pricing-feature">• Basic learning materials & quizzes</li>
+                        <li class="pricing-feature">• Community support</li>
+                        <li class="pricing-feature">• No certificates</li>
+                        <li class="pricing-feature">• Limited access to live sessions</li>
+                        <li class="pricing-feature">• Ad-supported experience</li>
+                    </ul>
+                </div>
 
+                {/*<!-- Professional Plan -->*/}
+                <div class="pricing-card pricing-professional pricing-popular">
+                    <div class="pricing-popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Professional Plan</h3>
+                        <p class="pricing-plan-subtitle-prof">Best for Individuals</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">35</span>
+                        <span class="pricing-period-prof">/per team per month</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-primary">
+                        Start 14-day Free Trial →
+                    </button>
+                    
+                    <div class="pricing-includes-prof">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features-prof">
+                        <li class="pricing-feature-prof">• Access to premium courses</li>
+                        <li class="pricing-feature-prof">• Earn recognized certificates</li>
+                        <li class="pricing-feature-prof">• Interactive quizzes & projects</li>
+                        <li class="pricing-feature-prof">• Live Q&A with instructors</li>
+                        <li class="pricing-feature-prof">• Offline & mobile access</li>
+                        <li class="pricing-feature-prof">• Priority support</li>
+                    </ul>
+                </div>
+
+                {/*<!-- Enterprise Plan -->*/}
+                <div class="pricing-card pricing-enterprise">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Enterprise Plan</h3>
+                        <p class="pricing-plan-subtitle">Best for Teams & Businesses</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">65</span>
+                        <span class="pricing-period">/per team per month</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Start 14-day Free Trial →
+                    </button>
+                    
+                    <div class="pricing-includes">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Team progress tracking</li>
+                        <li class="pricing-feature">• Custom learning paths</li>
+                        <li class="pricing-feature">• Dedicated account manager</li>
+                        <li class="pricing-feature">• Private mentorship & webinars</li>
+                        <li class="pricing-feature">• Advanced analytics & reports</li>
+                        <li class="pricing-feature">• Company LMS integration</li>
+                    </ul>
+                </div>
+
+                {/*<!-- Custom Plan -->*/}
+                <div class="pricing-card pricing-custom">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Custom Plan</h3>
+                        <p class="pricing-plan-subtitle">Tailored for Organizations & Institutions</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-price-custom">Contact Us</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Contact Us →
+                    </button>
+                    
+                    <div class="pricing-includes">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Access to premium courses</li>
+                        <li class="pricing-feature">• Earn recognized certificates</li>
+                        <li class="pricing-feature">• Interactive quizzes & projects</li>
+                        <li class="pricing-feature">• Live Q&A with instructors</li>
+                        <li class="pricing-feature">• Offline & mobile learning</li>
+                        <li class="pricing-feature">• Priority customer support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
       <Contacts />
     </div>
