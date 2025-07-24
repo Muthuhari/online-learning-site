@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Nav from '../Nav/Nav';
 import Contacts from "../Contacts/Contacts";
 import './Home.css'; 
 import { useNavigate } from "react-router-dom";
-function Home() {
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-  const navigate = useNavigate();
+function Home() {
+const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState('Frontend Development');
+  const carouselRef = useRef(null);
 
   const filters = [
     'Frontend Development',
@@ -17,12 +19,13 @@ function Home() {
     'Data Science',
     'Artificial Intelligence'
   ];
-    const courses = [
+
+  const courses = [
     {
       id: 1,
       image: '/img/img1.jpg', 
       title: 'HTML & CSS Course',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Deep dive into advanced concepts of web development.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
@@ -40,16 +43,16 @@ function Home() {
       id: 3,
       image: '/img/img3.png',
       title: 'React JS FastTrack',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Master React.js for modern web applications.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
     },
-     {
+    {
       id: 4,
       image: '/img/img4.jpg',
       title: 'Bootstrap Framework',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Learn responsive design with Bootstrap.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
@@ -58,7 +61,7 @@ function Home() {
       id: 5,
       image: '/img/img5.jpg', 
       title: 'React Unit Testing',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Master testing in React applications.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)'
@@ -72,7 +75,7 @@ function Home() {
       category: 'Backend Development',
       color: 'linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%)'
     },
-     {
+    {
       id: 7,
       image: '/img/img7.jpg',
       title: 'Python Django',
@@ -99,7 +102,7 @@ function Home() {
       category: 'Data Science',
       color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
     },
-      {
+    {
       id: 10,
       image: '/img/img10.jpg',
       title: 'Machine Learning Basics',
@@ -109,7 +112,27 @@ function Home() {
       color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     },
   ];
-   const filteredCourses = courses.filter(course => course.category === activeFilter);
+
+  const filteredCourses = courses.filter(course => course.category === activeFilter);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -320, // Scroll by one card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 320, // Scroll by one card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
+
 // Feedback Carousel Functionality
 class FeedbackCarousel {
     constructor() {
@@ -328,9 +351,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
     </section>
-      <section className="course-section">
-      <div className="container-course-fluid">
-        
+     <section className="courses-section">
+      <div className="courses-container">
         {/* Filter Tabs */}
         <div className="filter-container">
           <div className="filter-tabs">
@@ -346,28 +368,42 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
         
-        {/* Course Cards Container */}
-        <div className="course-scroll-container">
-          <div className="course-container">
-            {filteredCourses.map((course) => (
-              <div 
-                key={course.id} 
-                className="course-card" 
-                onClick={() => navigate(`/courseh/${course.id}`)}
-                style={{ background: course.color }}
-              >
-                <div className="course-content">
-                  {/*<img src={course.image} alt={course.title} className="course-image" />*/}
-                  <h3 className="course-title">{course.title}</h3>
-                  <p className="course-description">{course.content}</p>
-                  <div className="course-rating">
-                    <span className="rating-text">Rating: {course.rating}</span>
-                    <span className="star">★</span>
+        {/* Course Cards Carousel */}
+        <div className="carousel-wrapper">
+          <button className="carousel-btn carousel-btn-left" onClick={scrollLeft}>
+            <ChevronLeft size={24} />
+          </button>
+          
+          <div className="course-scroll-container" ref={carouselRef}>
+            <div className="course-container">
+              {filteredCourses.map((course) => (
+                <div 
+                  key={course.id} 
+                  className="course-card" 
+                  onClick={() => navigate(`/courseh/${course.id}`)}
+                  style={{ background: course.color }}
+                >
+                  <div className="course-content">
+                    <div className="course-image-container">
+                      <img src={course.image} alt={course.title} className="course-image" />
+                    </div>
+                    <div className="course-info">
+                      <h3 className="course-title">{course.title}</h3>
+                      <p className="course-description">{course.content}</p>
+                      <div className="course-rating">
+                        <span className="rating-text">Rating: {course.rating}</span>
+                        <span className="star">★</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          
+          <button className="carousel-btn carousel-btn-right" onClick={scrollRight}>
+            <ChevronRight size={24} />
+          </button>
         </div>
       </div>
     </section>
