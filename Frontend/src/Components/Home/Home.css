@@ -513,14 +513,14 @@
 }
 
 .filter-tab:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: #2EC4B6;;
+  color: #0c0c0c;;
   transform: translateY(-2px);
 }
 
 .filter-tab.active {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #2EC4B6;;
+  border-color: #2EC4B6;;
   color: white;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
@@ -532,11 +532,12 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  height: 500px;
 }
 
 /* Carousel Navigation Buttons */
 .carousel-btn {
-  background: white;
+  /*background: white;*/
   border: 2px solid #e0e0e0;
   border-radius: 50%;
   width: 50px;
