@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Nav from '../Nav/Nav';
 import Contacts from "../Contacts/Contacts";
 import './Home.css'; 
 import { useNavigate } from "react-router-dom";
-function Home() {
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-  const navigate = useNavigate();
+function Home() {
+const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState('Frontend Development');
+  const carouselRef = useRef(null);
 
   const filters = [
     'Frontend Development',
@@ -17,12 +19,13 @@ function Home() {
     'Data Science',
     'Artificial Intelligence'
   ];
-    const courses = [
+
+  const courses = [
     {
       id: 1,
       image: '/img/img1.jpg', 
       title: 'HTML & CSS Course',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Deep dive into advanced concepts of web development.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
@@ -40,16 +43,16 @@ function Home() {
       id: 3,
       image: '/img/img3.png',
       title: 'React JS FastTrack',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Master React.js for modern web applications.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
     },
-     {
+    {
       id: 4,
       image: '/img/img4.jpg',
       title: 'Bootstrap Framework',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Learn responsive design with Bootstrap.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
@@ -58,7 +61,7 @@ function Home() {
       id: 5,
       image: '/img/img5.jpg', 
       title: 'React Unit Testing',
-      content: 'Deep dive into advanced concepts of Cyber Security.',
+      content: 'Master testing in React applications.',
       rating: 4.7,
       category: 'Frontend Development',
       color: 'linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)'
@@ -72,7 +75,7 @@ function Home() {
       category: 'Backend Development',
       color: 'linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%)'
     },
-     {
+    {
       id: 7,
       image: '/img/img7.jpg',
       title: 'Python Django',
@@ -99,7 +102,7 @@ function Home() {
       category: 'Data Science',
       color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
     },
-      {
+    {
       id: 10,
       image: '/img/img10.jpg',
       title: 'Machine Learning Basics',
@@ -109,7 +112,27 @@ function Home() {
       color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     },
   ];
-   const filteredCourses = courses.filter(course => course.category === activeFilter);
+
+  const filteredCourses = courses.filter(course => course.category === activeFilter);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -320, // Scroll by one card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 320, // Scroll by one card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
+
 // Feedback Carousel Functionality
 class FeedbackCarousel {
     constructor() {
@@ -328,9 +351,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
     </section>
-      <section className="course-section">
-      <div className="container-course-fluid">
-        
+     <section className="courses-section">
+      <div className="courses-container">
         {/* Filter Tabs */}
         <div className="filter-container">
           <div className="filter-tabs">
@@ -346,28 +368,42 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
         
-        {/* Course Cards Container */}
-        <div className="course-scroll-container">
-          <div className="course-container">
-            {filteredCourses.map((course) => (
-              <div 
-                key={course.id} 
-                className="course-card" 
-                onClick={() => navigate(`/courseh/${course.id}`)}
-                style={{ background: course.color }}
-              >
-                <div className="course-content">
-                  {/*<img src={course.image} alt={course.title} className="course-image" />*/}
-                  <h3 className="course-title">{course.title}</h3>
-                  <p className="course-description">{course.content}</p>
-                  <div className="course-rating">
-                    <span className="rating-text">Rating: {course.rating}</span>
-                    <span className="star">★</span>
+        {/* Course Cards Carousel */}
+        <div className="carousel-wrapper">
+          <button className="carousel-btn carousel-btn-left" onClick={scrollLeft}>
+            <ChevronLeft size={24} />
+          </button>
+          
+          <div className="course-scroll-container" ref={carouselRef}>
+            <div className="course-container">
+              {filteredCourses.map((course) => (
+                <div 
+                  key={course.id} 
+                  className="course-card" 
+                  onClick={() => navigate(`/courseh/${course.id}`)}
+                  style={{ background: course.color }}
+                >
+                  <div className="course-content">
+                    <div className="course-image-container">
+                      <img src={course.image} alt={course.title} className="course-image" />
+                    </div>
+                    <div className="course-info">
+                      <h3 className="course-title">{course.title}</h3>
+                      <p className="course-description">{course.content}</p>
+                      <div className="course-rating">
+                        <span className="rating-text">Rating: {course.rating}</span>
+                        <span className="star">★</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          
+          <button className="carousel-btn carousel-btn-right" onClick={scrollRight}>
+            <ChevronRight size={24} />
+          </button>
         </div>
       </div>
     </section>
@@ -470,7 +506,135 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+<section>
+    <div class="pricing-section">
+        <div class="container-pricing-fluid">
+            <h2 class="section-pricing-title">Plans & Pricing</h2>
+            <p class="pricing-description">
+                Choose the perfect plan for your learning journey. Whether you're exploring for free or upgrading for premium features, we have a plan that fits your needs.
+            </p>
+            
+            <div class="pricing-cards-container">
+                {/*<!-- Free Plan -->*/}
+                <div class="pricing-card pricing-free">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Free Plan</h3>
+                        <p class="pricing-plan-subtitle">Best for Beginners</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-price-free">Free</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Start Learning →
+                    </button>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Limited No of free courses</li>
+                        <li class="pricing-feature">• Basic learning materials & quizzes</li>
+                        <li class="pricing-feature">• Community support</li>
+                        <li class="pricing-feature">• No certificates</li>
+                        <li class="pricing-feature">• Limited access to live sessions</li>
+                        <li class="pricing-feature">• Ad-supported experience</li>
+                    </ul>
+                </div>
 
+                {/*<!-- Professional Plan -->*/}
+                <div class="pricing-card pricing-professional pricing-popular">
+                    <div class="pricing-popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Professional Plan</h3>
+                        <p class="pricing-plan-subtitle-prof">Best for Individuals</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">35</span>
+                        <span class="pricing-period-prof">/per team per month</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-primary">
+                        Start 14-day Free Trial →
+                    </button>
+                    
+                    <div class="pricing-includes-prof">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features-prof">
+                        <li class="pricing-feature-prof">• Access to premium courses</li>
+                        <li class="pricing-feature-prof">• Earn recognized certificates</li>
+                        <li class="pricing-feature-prof">• Interactive quizzes & projects</li>
+                        <li class="pricing-feature-prof">• Live Q&A with instructors</li>
+                        <li class="pricing-feature-prof">• Offline & mobile access</li>
+                        <li class="pricing-feature-prof">• Priority support</li>
+                    </ul>
+                </div>
+
+                {/*<!-- Enterprise Plan -->*/}
+                <div class="pricing-card pricing-enterprise">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Enterprise Plan</h3>
+                        <p class="pricing-plan-subtitle">Best for Teams & Businesses</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">65</span>
+                        <span class="pricing-period">/per team per month</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Start 14-day Free Trial →
+                    </button>
+                    
+                    <div class="pricing-includes">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Team progress tracking</li>
+                        <li class="pricing-feature">• Custom learning paths</li>
+                        <li class="pricing-feature">• Dedicated account manager</li>
+                        <li class="pricing-feature">• Private mentorship & webinars</li>
+                        <li class="pricing-feature">• Advanced analytics & reports</li>
+                        <li class="pricing-feature">• Company LMS integration</li>
+                    </ul>
+                </div>
+
+                {/*<!-- Custom Plan -->*/}
+                <div class="pricing-card pricing-custom">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Custom Plan</h3>
+                        <p class="pricing-plan-subtitle">Tailored for Organizations & Institutions</p>
+                    </div>
+                    
+                    <div class="pricing-price-container">
+                        <span class="pricing-price-custom">Contact Us</span>
+                    </div>
+                    
+                    <button class="pricing-btn pricing-btn-secondary">
+                        Contact Us →
+                    </button>
+                    
+                    <div class="pricing-includes">
+                        <strong>Includes Free Plan features</strong>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">• Access to premium courses</li>
+                        <li class="pricing-feature">• Earn recognized certificates</li>
+                        <li class="pricing-feature">• Interactive quizzes & projects</li>
+                        <li class="pricing-feature">• Live Q&A with instructors</li>
+                        <li class="pricing-feature">• Offline & mobile learning</li>
+                        <li class="pricing-feature">• Priority customer support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
       <Contacts />
     </div>

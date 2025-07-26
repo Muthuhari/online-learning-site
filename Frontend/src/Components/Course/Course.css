@@ -20,10 +20,10 @@
     text-align: right;
   }
 .update-button{
-  background-color: #603aa7;
+  background-color: #2EC4B6;
 }
 .update-button:hover {
-  background-color: #4c2d88 !important; 
+  background-color: #2EC4B6; 
 }
   .card-text {
     white-space: normal;

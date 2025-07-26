@@ -61,11 +61,11 @@ button {
 }
 
 button:hover {
-  background-color: #603aa7;
+  background-color: #2EC4B6;
 }
 
 button:active {
-  background-color: #603aa7;
+  background-color: #2EC4B6;
 }
 
 /* Add responsive design */
@@ -95,9 +95,9 @@ button:active {
   margin-top: 10px; 
 }
 .submit{
-  background-color: #603aa7;
+  background-color: #2EC4B6;
 }
 
 .submit:hover {
-  background-color: #4c2d88 !important; 
+  background-color: #2EC4B6 ; 
 }
