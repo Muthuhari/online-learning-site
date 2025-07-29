@@ -15,6 +15,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import SendPdf from "./Components/SendPdf/SendPdf";
 import Imguploder from "./Components/Imguploder/Imguploder";
 import Course1 from "./Components/courseh/1";
+import AllCourses from "./Components/NavBarItems/AllCourses";
 function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/mainhome" element={<Home />} />
           <Route path="/addCourse" element={<AddCourse />} />
           <Route path="/coursedetails" element={<Courses />} />
+          <Route path="/allCourses" element={<AllCourses />} />
           <Route path="/conus" element={<ContactUs />} />
           <Route path="/sendpdf" element={<SendPdf />} />
           <Route path="/imgpart" element={<Imguploder />} />

@@ -267,9 +267,9 @@ document.addEventListener('DOMContentLoaded', function() {
                   Get Started
                   <i className="fas fa-arrow-right ms-2"></i>
                 </button>
-                <button className="btn btn-outline-secondary secondary-btn">
+                {/*<button className="btn btn-outline-secondary secondary-btn">
                   As a Student
-                </button>
+                </button>*/}
               </div>
             </div>
           </div>
