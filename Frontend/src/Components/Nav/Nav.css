@@ -37,11 +37,22 @@
     border: 2px solid #ffffff;
     border-radius: 4px;
     font-size: 0.75rem; 
-    color: #fff;
+    color: #ffffff ;
     transition: all 0.2s;
     box-shadow: none;
   }
-  
+  /* Style for center nav links */
+.navbar-nav.mx-auto .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Optional: Add hover effect */
+.navbar-nav.mx-auto .nav-link:hover {
+  color: #ffe600 !important; /* bright yellow on hover */
+  text-decoration: underline;
+}
   .nav-item .nav-link .custom-button:hover {
     border-color: #ffffff ;
     color: #ffffff ;
@@ -72,7 +83,7 @@
   
   }
   
-  /*@media (min-width: 993px) {
+  @media (min-width: 993px) {
     .register-button {
       color: #ffffff;
       border-color: #ffffff;
@@ -88,4 +99,4 @@
         }
 
       
-  }*/
+  }
