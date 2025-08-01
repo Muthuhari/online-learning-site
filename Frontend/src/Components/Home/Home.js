@@ -448,64 +448,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
      </section>
-      <section>
-    <div class="feedback-section">
-        <div class="container-feedback-fluid">
-            <h2 class="section-feedback-title">What Our Clients Say About Us</h2>
-            
-            <div class="feedback-carousel-container">
-                {/*Left testimonial */}
-                <div class="feedback-card feedback-left">
-                    <div class="feedback-profile">
-                        <img src="/img/client1.jpg" alt="John Doe" class="feedback-avatar"/>
-                        <div class="feedback-info">
-                            <h4 class="feedback-name">John Doe</h4>
-                            <p class="feedback-role">Product Manager</p>
-                        </div>
-                    </div>
-                    <div class="feedback-quote-icon">"</div>
-                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
-                </div>
 
-                {/*<!-- Center testimonial (active) -->*/}
-                <div class="feedback-card feedback-center feedback-active">
-                    <div class="feedback-profile">
-                        <img src="/img/client2.jpg" alt="Hannah Schmitt" class="feedback-avatar"/>
-                        <div class="feedback-info">
-                            <h4 class="feedback-name">Hannah Schmitt</h4>
-                            <p class="feedback-role">Lead designer</p>
-                        </div>
-                    </div>
-                    <div class="feedback-quote-icon">"</div>
-                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
-                </div>
-
-                {/*<!-- Right testimonial -->*/}
-                <div class="feedback-card feedback-right">
-                    <div class="feedback-profile">
-                       <img src="/img/client3.jpg" alt="Hannah Schmitt" className="feedback-avatar" />
-                        <div class="feedback-info">
-                            <h4 class="feedback-name">Sarah Wilson</h4>
-                            <p class="feedback-role">Marketing Director</p>
-                        </div>
-                    </div>
-                    <div class="feedback-quote-icon">"</div>
-                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
-                </div>
-
-                {/*<!-- Hidden testimonials for carousel -->*/}
-              
-            </div>
-
-            {/*<!-- Navigation dots -->*/}
-            <div class="feedback-dots-container">
-                <button class="feedback-dot feedback-dot-active" data-slide="0"></button>
-                <button class="feedback-dot" data-slide="1"></button>
-                <button class="feedback-dot" data-slide="2"></button>
-            </div>
-        </div>
-    </div>
-</section>
 <section>
     <div class="pricing-section">
         <div class="container-pricing-fluid">
@@ -635,6 +578,65 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+<section>
+    <div class="feedback-section">
+        <div class="container-feedback-fluid">
+            <h2 class="section-feedback-title">What Our Clients Say About Us</h2>
+            
+            <div class="feedback-carousel-container">
+                {/*Left testimonial */}
+                <div class="feedback-card feedback-left">
+                    <div class="feedback-profile">
+                        <img src="/img/client1.jpg" alt="John Doe" class="feedback-avatar"/>
+                        <div class="feedback-info">
+                            <h4 class="feedback-name">John Doe</h4>
+                            <p class="feedback-role">Product Manager</p>
+                        </div>
+                    </div>
+                    <div class="feedback-quote-icon">"</div>
+                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
+                </div>
+
+                {/*<!-- Center testimonial (active) -->*/}
+                <div class="feedback-card feedback-center feedback-active">
+                    <div class="feedback-profile">
+                        <img src="/img/client2.jpg" alt="Hannah Schmitt" class="feedback-avatar"/>
+                        <div class="feedback-info">
+                            <h4 class="feedback-name">Hannah Schmitt</h4>
+                            <p class="feedback-role">Lead designer</p>
+                        </div>
+                    </div>
+                    <div class="feedback-quote-icon">"</div>
+                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
+                </div>
+
+                {/*<!-- Right testimonial -->*/}
+                <div class="feedback-card feedback-right">
+                    <div class="feedback-profile">
+                       <img src="/img/client3.jpg" alt="Hannah Schmitt" className="feedback-avatar" />
+                        <div class="feedback-info">
+                            <h4 class="feedback-name">Sarah Wilson</h4>
+                            <p class="feedback-role">Marketing Director</p>
+                        </div>
+                    </div>
+                    <div class="feedback-quote-icon">"</div>
+                    <p class="feedback-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim</p>
+                </div>
+
+                {/*<!-- Hidden testimonials for carousel -->*/}
+              
+            </div>
+
+            {/*<!-- Navigation dots -->*/}
+            <div class="feedback-dots-container">
+                <button class="feedback-dot feedback-dot-active" data-slide="0"></button>
+                <button class="feedback-dot" data-slide="1"></button>
+                <button class="feedback-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
       <Contacts />
     </div>
