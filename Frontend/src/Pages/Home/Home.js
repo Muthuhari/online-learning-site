@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
-import Nav from '../Nav/Nav';
+import Nav from '../../Pages/Nav/Nav';
 import Contacts from "../Contacts/Contacts";
-import './Home.css'; 
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 

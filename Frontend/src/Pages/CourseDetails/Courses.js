@@ -3,7 +3,6 @@ import Nav from "../Nav/Nav";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Contacts from "../Contacts/Contacts";
-import './Courses.css';
 import { useReactToPrint } from "react-to-print";
 
 const URL = "http://localhost:5000/courses";

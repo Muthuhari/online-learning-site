@@ -3,7 +3,6 @@ import Nav from "../Nav/Nav";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { Eye, EyeOff } from 'lucide-react';
-import './Register.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';
 

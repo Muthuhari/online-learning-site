@@ -3,7 +3,7 @@
 //import { useNavigate } from "react-router";
 //import axios from "axios";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-//import './Course.css'
+//import './assets/custom.css';
 
 //function Course(props) {
 //  const { _id, name, description, cost } = props.user;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Nav from "../Nav/Nav"
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
-import './Login.css'; 
 import { Eye, EyeOff } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';

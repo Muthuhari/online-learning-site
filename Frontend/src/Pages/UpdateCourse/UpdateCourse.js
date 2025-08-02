@@ -3,7 +3,6 @@ import Nav from "../Nav/Nav";
 import { useNavigate } from "react-router";
 import { useParams } from "react-router";
 import axios from "axios";
-import './UpdateCourse.css'
 import Contacts from "../Contacts/Contacts";
 
 function UpdateCourse() {
@@ -49,9 +48,9 @@ function UpdateCourse() {
   };
 
   return (
-    <div>
+    <>
       <Nav />
-      <div className="update-page">
+      <>
       <h1>Update course</h1>
       <form onSubmit={handleSubmit}>
         <label>Course Name</label>
@@ -73,9 +72,9 @@ function UpdateCourse() {
         <button type="submit" className="btn btn-primary submit">Submit</button> 
       </div>
       </form>
-    </div>
+    </>
     <Contacts />
-    </div>
+</>
   );
 }
 

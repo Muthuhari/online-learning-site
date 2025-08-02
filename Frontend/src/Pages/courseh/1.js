@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Course1.css";
 import Nav from "../Nav/Nav";
 import Contacts from "../Contacts/Contacts";
 

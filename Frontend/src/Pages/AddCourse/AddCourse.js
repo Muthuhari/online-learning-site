@@ -4,7 +4,6 @@ import Nav from "../Nav/Nav";
 import Contacts from "../Contacts/Contacts";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import './AddCourse.css';
 const URL ="http://localhost:5000/courses";
 
 
