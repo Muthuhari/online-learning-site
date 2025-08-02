@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';
 
 function Login() {
-  
+  const navigate = useNavigate();
   const history = useNavigate();
   const [user, setUser] = useState({
     gmail: "",
@@ -109,8 +109,14 @@ const handleSocialLogin = (provider) => {
               </button>
 
               <div className="login-link">
-                <span>Create new account</span>
+                <span
+                  style={{ cursor: "pointer", textDecoration: "underline" }}
+                  onClick={() => navigate('/regi')}
+                >
+                  Create new account
+                </span>
               </div>
+
 
               <div className="divider">
                 <span>Or continue with</span>

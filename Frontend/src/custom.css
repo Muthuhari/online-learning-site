@@ -1,4 +1,7 @@
 
+/*____________Add course_____________*/
+
+
 .add-page {
   max-width: 600px;
   margin: 0 auto;
@@ -101,7 +104,7 @@ button:active {
 .submit:hover {
   background-color: #2EC4B6 ; 
 }
-/*_________________________*/
+/*____________Footer_____________*/
 
 .bg-purple {
     background-color: #2e3232; /* Purple shade for footer */
@@ -141,7 +144,7 @@ button:active {
     align-items: top;
   }
 
-  /*_________________________*/
+  /*____________Landing Page_____________*/
 
   .home-ul {
     display: flex;
@@ -163,7 +166,7 @@ h1 {
     margin: 0;
     font-size: 1.5rem;
 }
- /*_________________________*/
+ /*___________Update page______________*/
 
 
  
@@ -228,7 +231,7 @@ h1 {
   .course-rating1 .star {
     color: gold;
   }
- /*_________________________*/
+ /*____________Teaching page_____________*/
 
 .row {
     display: flex;
@@ -336,7 +339,7 @@ h1 {
    background-color: #2EC4B6;
 }*/
 
- /*_________________________*/
+ /*____________course1-page_____________*/
 
 
 .course1-page {
@@ -495,7 +498,7 @@ h1 {
   
 
 
-  /*_________________________*/
+  /*______________Hero section___________*/
 
 /* Hero Section Styles */
 .home-header {
@@ -562,7 +565,7 @@ h1 {
   align-items: center;
 }
 
-.primary-btn {
+.hero-buttons .primary-btn {
   background: linear-gradient(135deg, #40e0d0 0%, #20b2aa 100%);
   border: none;
   padding: 0.875rem 2rem;
@@ -849,7 +852,7 @@ h1 {
   margin: 0;
 }
 
-/* Courses Section */
+/*---------------- Courses Section ---------------*/
 .courses-section {
   padding: 4rem 0 2rem;
   background: white;

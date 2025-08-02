@@ -9,6 +9,7 @@ import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-ico
 
 function Register() {
   const history = useNavigate();
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     gmail: "",
@@ -145,7 +146,12 @@ function Register() {
               </button>
 
               <div className="login-link">
-                <span>Already have an account</span>
+                <span
+                  style={{ cursor: "pointer", textDecoration: "underline" }}
+                  onClick={() => navigate('/log')}
+                >
+                  Already have an account
+                </span>
               </div>
 
               <div className="divider">
