@@ -15,7 +15,7 @@ function UpdateCourse() {
       await axios
         .get(`http://localhost:5000/courses/${id}`)
         .then((res) => res.data)
-        .then((data) => setInputs(data.user));
+       .then(({ course }) => setInputs(course));
     };
     fetchHandler();
   }, [id]);

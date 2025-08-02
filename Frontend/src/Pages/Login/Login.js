@@ -37,13 +37,15 @@ function Login() {
     }
 
   }
-  const sendRequest = async() =>{
-    return await axios
-    .post("http://localhost:5000/login",{
+
+  const sendRequest = async () => {
+  return await axios
+    .post("http://localhost:5000/users/login", {
       gmail: user.gmail,
-      password: user.password,     
-    }).then(res => res.data);
-  }
+      password: user.password,
+    })
+    .then(res => res.data);
+}
 const handleSocialLogin = (provider) => {
     console.log(`Login with ${provider}`);
     // Implement social login logic here

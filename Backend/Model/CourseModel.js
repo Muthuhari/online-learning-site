@@ -1,8 +1,8 @@
 
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const userSchema =new Schema({
+const courseSchema =new Schema({
     name:{
         type:String,//dataType
         required:true,//validate
@@ -17,7 +17,9 @@ const userSchema =new Schema({
     },
 })
 
-module.exports = mongoose.model(
+const CourseModel = mongoose.model(
     "CourseModel",//file name
-    userSchema // function name
+    courseSchema // function name
 )
+
+export default CourseModel

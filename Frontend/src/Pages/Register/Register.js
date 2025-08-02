@@ -43,7 +43,7 @@ function Register() {
   };
   
   const sendRequest = async () => {
-    await axios.post("http://localhost:5000/register", {
+    await axios.post("http://localhost:5000/users", {
       name: String(user.name),
       gmail: String(user.gmail),
       password: String(user.password),     

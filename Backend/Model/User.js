@@ -1,8 +1,8 @@
 
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const regiSchema =new Schema({
+const userSchema =new Schema({
     name:{
         type:String,//dataType
         required:true,//validate
@@ -16,7 +16,9 @@ const regiSchema =new Schema({
         required:true,//validate
     }
 })
-module.exports = mongoose.model(
-    "Register",//file name
-    regiSchema // function name
+const User = mongoose.model(
+    "User",//file name
+    userSchema // function name
 )
+
+export default User
