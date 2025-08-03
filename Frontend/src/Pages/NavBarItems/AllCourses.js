@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Nav from '../Nav/Nav';
 import Contacts from "../Contacts/Contacts";
 import { useNavigate } from "react-router-dom";
-
+  import SearchBar from "../../Components/SearchBar"; 
 function AllCourses() {
 const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState('Frontend Development');
@@ -242,35 +242,13 @@ const filteredCourses = courses
   <Nav />
   <section className="courses-section">
     {/* Search Box */}
-  <div className="search-bar-container" style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
-  <input
-    type="text"
-    placeholder="Search courses..."
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-    style={{
-      padding: '10px',
-      width: '300px',
-      borderRadius: '15px',
-      border: '1px solid #ccc',
-      marginRight: '10px'
-    }}
-  />
-  <button
-    onClick={() => {}} // Optional: You can keep this button if you want form-based search
-    style={{
-      padding: '10px 20px',
-      borderRadius: '15px',
-      border: 'none',
-      backgroundColor: '#0ba2a2ff',
-      color: 'white',
-      cursor: 'pointer'
-    }}
-  >
-    Search
-  </button>
+ <div className="search-bar-container" style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
+ <SearchBar
+  value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
+  placeholder="Search courses..."
+/>
 </div>
-
     <div className="courses-container">
       {/* Filter Tabs */}
       <div className="filter-container">
