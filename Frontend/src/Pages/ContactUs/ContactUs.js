@@ -30,7 +30,7 @@ function ContactUs() {
   return (
     <div>
       <Nav/>
-      <h1>ContactUs</h1>
+      <div className="page-title">ContactUs</div>
       <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <br></br>

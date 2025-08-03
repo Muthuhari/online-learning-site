@@ -4,6 +4,9 @@ import Nav from "../Nav/Nav";
 import Contacts from "../Contacts/Contacts";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Input from "../../Components/Input";
+import Textarea from "../../Components/Textarea";
+
 const URL ="http://localhost:5000/courses";
 
 
@@ -41,19 +44,36 @@ function AddCourse() {
     }
 
   return (
-    <div>
+    <>
       <Nav />
-      <div className="add-page">
-      <h1>Add Course</h1>
+      <>
+      <div className="page-title">Add Course</div>
       <form onSubmit={handleSubmit}>
-        <label>Course Name</label>
-        <input type="text" name="name" onChange={handleChange} value={inputs.name} required></input>
-     
-        <label>Course Details</label>
-        <textarea type="text" name="description" onChange={handleChange} value={inputs.description} required></textarea>
-        
-        <label>Cost</label>
-        <input type="text" name="cost" onChange={handleChange} value={inputs.cost} required></input>
+        <Input
+        label="Course Name"
+        name="name"
+        value={inputs.name}
+        onChange={handleChange}
+        required
+      />
+
+         <Textarea
+    label="Course Details"
+    name="description"
+    value={inputs.description}
+    onChange={handleChange}
+    required
+  />
+          <Input
+            label="Price"
+            name="name"
+            value={inputs.cost}
+            onChange={handleChange}
+            required
+          />
+
+
+
         <div className="button-group">
         <button
           type="button"
@@ -65,9 +85,9 @@ function AddCourse() {
         <button type="submit" className="btn btn-primary submit">Submit</button> 
       </div>
       </form>
-      </div>
+      </>
       <Contacts />
-    </div>
+    </>
   );
 }
 

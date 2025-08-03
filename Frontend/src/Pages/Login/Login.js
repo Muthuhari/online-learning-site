@@ -75,9 +75,10 @@ const handleSocialLogin = (provider) => {
             <form onSubmit={handleSubmit} className="login-form">
 
 
-              <div className="form-group">
-                <label>Gmail</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Gmail</label>
                 <input
+                className="custom-input-field"
                   type="email"
                   name="gmail"
                   onChange={handleInputChange}
@@ -86,8 +87,8 @@ const handleSocialLogin = (provider) => {
                 />
               </div>
 
-              <div className="form-group">
-                <label>Password</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Password</label>
                 <div className="password-input-container">
                   <input
                     type="password"

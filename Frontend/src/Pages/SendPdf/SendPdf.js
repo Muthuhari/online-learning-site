@@ -62,7 +62,7 @@ function SendPdf() {
     return (
       <div>
         <Nav />
-        <h1>Send Pdf</h1>
+        <div className="page-title">Send Pdf</div>
         <form onSubmit={submitPdf}> {/* Fixed the typo from <from> to <form> */}
           <label>Pdf Title</label>
           <input

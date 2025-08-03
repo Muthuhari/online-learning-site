@@ -79,9 +79,10 @@ function Register() {
           {/* Right side - Registration form */}
           <div className="right-section">
             <form onSubmit={handleSubmit} className="register-form">
-              <div className="form-group">
-                <label>Name</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Name</label>
                 <input
+                 className="custom-input-field"
                   type="text"
                   name="name"
                   onChange={handleInputChange}
@@ -90,9 +91,10 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label>Gmail</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Gmail</label>
                 <input
+                className="custom-input-field"
                   type="email"
                   name="gmail"
                   onChange={handleInputChange}
@@ -101,10 +103,11 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label>Create Password</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Create Password</label>
                 <div className="password-input-container">
                   <input
+                  className="custom-input-field"
                     type={showCreatePassword ? "text" : "password"}
                     name="createPassword"
                     onChange={handleInputChange}
@@ -121,8 +124,8 @@ function Register() {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>Password</label>
+              <div className="custom-input-wrapper">
+                <label className="custom-input-label">Password</label>
                 <div className="password-input-container">
                   <input
                     type={showPassword ? "text" : "password"}

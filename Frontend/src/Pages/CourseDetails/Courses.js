@@ -63,7 +63,7 @@ const deleteHandler = async (id) => {
   return (
     <div>
       <Nav />
-      <h1>My Teaching</h1>
+      <div className="page-title">My Teaching</div>
 
       <div className="row mb-4">
         <div className="col-md-3">
