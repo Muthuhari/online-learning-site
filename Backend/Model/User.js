@@ -2,24 +2,23 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const courseSchema =new Schema({
+const userSchema =new Schema({
     name:{
         type:String,//dataType
         required:true,//validate
     },
-    description:{
+    gmail:{
         type:String,//dataType
         required:true,//validate
     },
-    cost:{
-        type:Number,//dataType
+    password:{
+        type:String,//dataType
         required:true,//validate
-    },
+    }
 })
-
-const CourseModel = mongoose.model(
-    "CourseModel",//file name
-    courseSchema // function name
+const User = mongoose.model(
+    "User",//file name
+    userSchema // function name
 )
 
-export default CourseModel
+export default User

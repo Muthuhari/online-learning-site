@@ -1,17 +1,9 @@
+import express from "express";
+import { createUser, login} from "../Controllers/UserControllers.js";
 
-const express = require("express");
-const router = express.Router();
+const UserRoutes = express.Router();
 
-//Insert Model
-const User = require("../Model/CourseModel");
+UserRoutes.post("/", createUser);
+UserRoutes.post("/login", login);
 
-//Insert User Controller
-const UserController = require("../Controllers/UserControllers");
-router.get("/",UserController.getAllCourse);
-router.post("/",UserController.addCourse);
-router.get("/:id",UserController.getById);
-router.put("/:id",UserController.updateCourse);
-router.delete("/:id",UserController.deleteUser);
-
-//export
-module.exports = router;
+export default UserRoutes;
