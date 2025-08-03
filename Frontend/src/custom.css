@@ -52,19 +52,7 @@ button:active {
     font-size: 14px;
   }
 }
-.button-group {
-  display: flex;
-  justify-content: flex-end; 
-  gap: 8px;
-  margin-top: 10px; 
-}
-.submit{
-  background-color: #2EC4B6;
-}
 
-.submit:hover {
-  background-color: #2EC4B6 ; 
-}
 /*____________Footer_____________*/
 
 .bg-purple {
@@ -215,21 +203,19 @@ button:active {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
-    width: 200px;
-    transition: all 0.3s ease;
+    width: 180px;
     background-color: #2EC4B6;
   }
   
   .custom-btn:hover {
-    background-color: #2EC4B6;
-    transform: translateY(-3px);
+    background-color: #0b8075;
   }
   
   .custom-btn i {
-    font-size: 18px;
+    font-size: 14px;
     color: white; 
   }
   
@@ -2157,7 +2143,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin: 20px;
 }
 
 .form-group label {
@@ -2676,11 +2662,32 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }*/
 
-
+/*
 form {
   display: flex;
   flex-direction: column;
   padding-left: 12px;
+}*/
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 8px; /* Add space between buttons */
+    margin-top: 10px; /* Space above the buttons */
+  }
+
+.btn.btn-primary.submit {
+  background-color: #2EC4B6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary.submit:hover {
+  background-color: #06655b; 
 }
 
 label {
@@ -2690,25 +2697,26 @@ label {
 }
 
 .input-field {
-  padding: 12px;
+  padding: 10px;
   width: 300px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
   transition: border-color 0.3s ease;
-  margin-bottom: 30px; /* ✅ */
+  margin-bottom: 25px;
 }
 
 .textarea-field {
-  padding: 12px;
-  width: 700px;
+  padding: 10px;
+  width: 1000px;
+  height: 140px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
   transition: border-color 0.3s ease;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 button:hover {
@@ -2735,15 +2743,6 @@ button:active {
     font-size: 14px;
   }
 }
-.button-group {
-    display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
-    gap: 8px; /* Add space between buttons */
-    margin-top: 10px; /* Space above the buttons */
-  }
-  .submit{
-    background-color: #2EC4B6;
-  }
 
 
 
@@ -2866,3 +2865,33 @@ button:active {
 
       
   }
+.btn-search {
+  background-color: #2EC4B6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+  background-color: #26b3a6;
+}
+.floating-add-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+}
+.custom-search-btn {
+  background-color: #2EC4B6;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-search-btn:hover {
+  background-color: #25a89e;
+}

@@ -2,8 +2,9 @@ import React from "react";
 
 function Input({ type = "text", name, value, onChange, label, required = false }) {
   return (
-    <div className="form-group">
-      {label && <label htmlFor={name}>{label}</label>}
+    <div >
+      {label && <label htmlFor={name} className="label">{label} </label>}
+      
       <input
          className="input-field"
         type={type}

@@ -6,6 +6,8 @@ import axios from "axios";
 import Contacts from "../Contacts/Contacts";
 import Input from "../../Components/Input";
 import Textarea from "../../Components/Textarea";
+import Form from "../../Components/Form";
+import ButtonGroup from "../../Components/ButtonGroup";
 
 function UpdateCourse() {
   const [inputs, setInputs] = useState({});
@@ -54,7 +56,7 @@ function UpdateCourse() {
       <Nav />
       <>
       <div className="page-title">Update course</div>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} >
        <Input
         label="Course Name"
         name="name"
@@ -72,25 +74,17 @@ function UpdateCourse() {
       />
 
       <Input
-        label="Cost"
+        label="Price"
+        type="number"    
         name="cost"
         value={inputs.cost || ''}
         onChange={handleChange}
         required
       />
-        <div className="button-group">
-        <button
-          type="button"
-          className="btn btn-secondary ms-2"
-          onClick={() => history('/coursedetails')}
-        >
-          Cancel
-        </button>
-        <button type="submit" className="btn btn-primary submit">Submit</button> 
-      </div>
-      </form>
+        <ButtonGroup onCancel={() => history('/coursedetails')} />
+      </Form>
     </>
-    <Contacts />
+ 
 </>
   );
 }

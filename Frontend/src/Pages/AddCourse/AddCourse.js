@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Input from "../../Components/Input";
 import Textarea from "../../Components/Textarea";
+import Form from "../../Components/Form";
+import ButtonGroup from "../../Components/ButtonGroup";
 
 const URL ="http://localhost:5000/courses";
 
@@ -47,9 +49,9 @@ function AddCourse() {
     <>
       <Nav />
       <>
-      <div className="page-title">Add Course</div>
-      <form onSubmit={handleSubmit}>
-        <Input
+      <div className="page-title">Create Course</div>
+     <Form onSubmit={handleSubmit} >
+      <Input
         label="Course Name"
         name="name"
         value={inputs.name}
@@ -57,36 +59,25 @@ function AddCourse() {
         required
       />
 
-         <Textarea
-    label="Course Details"
-    name="description"
-    value={inputs.description}
-    onChange={handleChange}
-    required
-  />
-          <Input
-            label="Price"
-            name="name"
-            value={inputs.cost}
-            onChange={handleChange}
-            required
-          />
+      <Textarea
+        label="Course Details"
+        name="description"
+        value={inputs.description}
+        onChange={handleChange}
+        required
+      />
+      <Input
+        label="Price"
+        type="number"    
+        name="cost"
+        value={inputs.cost}
+        onChange={handleChange}
+        required
+      />
 
-
-
-        <div className="button-group">
-        <button
-          type="button"
-          className="btn btn-secondary ms-2"
-          onClick={() => history('/coursedetails')} // Redirect to another page
-        >
-          Cancel
-        </button>
-        <button type="submit" className="btn btn-primary submit">Submit</button> 
-      </div>
-      </form>
+         <ButtonGroup onCancel={() => history('/coursedetails')} />
+    </Form>
       </>
-      <Contacts />
     </>
   );
 }

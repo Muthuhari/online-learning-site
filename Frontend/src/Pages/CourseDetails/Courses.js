@@ -4,6 +4,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Contacts from "../Contacts/Contacts";
 import { useReactToPrint } from "react-to-print";
+import IconButton from "../../Components/IconButton";
+import SearchBar from "../../Components/SearchBar";
 
 const URL = "http://localhost:5000/courses";
 
@@ -65,36 +67,19 @@ const deleteHandler = async (id) => {
       <Nav />
       <div className="page-title">My Teaching</div>
 
-      <div className="row mb-4">
-        <div className="col-md-3">
-          <button onClick={handleAddCourse} className="custom-btn">
-            <i className="fas fa-plus me-2"></i> Add Course
-          </button>
+      <div className="row mb-4 justify-content-start">
+        <div className="col-md-4">
+        <IconButton onClick={handleAddCourse} iconClass="fas fa-plus">
+          Create Course
+        </IconButton>
         </div>
-
-        <div className="col-md-6 d-flex justify-content-center">
-          <div className="input-group" style={{ maxWidth: "400px", width: "100%" }}>
-            <span className="input-group-text bg-light border-primary rounded-start">
-              <i className="fas fa-search text-primary"></i>
-            </span>
-            <input
-              onChange={(e) => setSearchQuery(e.target.value)}
-              type="text"
-              name="search"
-              placeholder="Search course details"
-              className="form-control border-primary"
-            />
-          </div>
-          <button
-            onClick={handleSearch}
-            className="btn-search ms-3 rounded"
-            style={{ height: "38px" }}
-          >
-            Search
-          </button>
+<div className="col-md-8">
+        <SearchBar
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onSearch={handleSearch}
+        />
         </div>
-
-        <div className="col-md-3"></div>
       </div>
 
        {noResults ? (
@@ -139,7 +124,7 @@ const deleteHandler = async (id) => {
         </div>
       )}
 
-      <Contacts />
+
     </div>
   );
 }
