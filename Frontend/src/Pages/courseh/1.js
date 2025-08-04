@@ -50,7 +50,7 @@ function Course1() {
           <div className="course1-buy-section">
             <p className="course1-price">{course.price}</p>
             <button
-              className="btn buy-now-btn"
+              className="buy-now-btn"
               onClick={() => setShowModal(true)}
             >
               Buy Now

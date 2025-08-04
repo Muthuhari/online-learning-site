@@ -73,7 +73,7 @@ const deleteHandler = async (id) => {
           Create Course
         </IconButton>
         </div>
-<div className="col-md-8">
+      <div className="col-md-8">
         <SearchBar
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
