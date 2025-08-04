@@ -2895,3 +2895,32 @@ button:active {
 .custom-search-btn:hover {
   background-color: #25a89e;
 }
+.blog-image{
+  width: 700px;
+  height: 400px;
+   border-radius: 4px;
+}
+.blog-container{
+  margin-bottom: 40px;
+}
+.logo-about-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.abot-content {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.abot-topic {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2EC4B6;
+  margin-bottom: 20px;
+} 

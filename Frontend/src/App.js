@@ -15,6 +15,10 @@ import SendPdf from "./Pages/SendPdf/SendPdf";
 import Imguploder from "./Pages/Imguploder/Imguploder";
 import Course1 from "./Pages/courseh/1";
 import AllCourses from "./Pages/NavBarItems/AllCourses";
+import Blogs from "./Pages/NavBarItems/Blogs";
+import About from "./Pages/NavBarItems/About";
+import Events from "./Pages/NavBarItems/Events";
+
 function App() {
   return (
     <div>
@@ -25,6 +29,9 @@ function App() {
           <Route path="/addCourse" element={<AddCourse />} />
           <Route path="/coursedetails" element={<Courses />} />
           <Route path="/allCourses" element={<AllCourses />} />
+          <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/events" element={<Events/>} />
           <Route path="/conus" element={<ContactUs />} />
           <Route path="/sendpdf" element={<SendPdf />} />
           <Route path="/imgpart" element={<Imguploder />} />
